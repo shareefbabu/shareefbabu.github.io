@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 header {
     position: fixed;
     top: 0;
@@ -128,7 +132,7 @@ header {
 .content {
     max-width: 1500px;
     color: #555;
-    margin-left: 300px;
+    margin-left: 400px;
 }
 
 .content1 {
