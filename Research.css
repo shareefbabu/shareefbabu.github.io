@@ -52,30 +52,37 @@
 }
 
 @media (max-width: 1199px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 257px;
+  }
+
   .u-section-2 .u-image-1 {
     inset: auto;
+    margin-bottom: 25px;
   }
 }
 
 @media (max-width: 991px) {
   .u-section-2 .u-sheet-1 {
-    min-height: 305px;
+    min-height: 224px;
   }
 
   .u-section-2 .u-image-1 {
     width: 720px;
     height: 196px;
+    margin-bottom: 19px;
   }
 }
 
 @media (max-width: 767px) {
   .u-section-2 .u-sheet-1 {
-    min-height: 495px;
+    min-height: 164px;
   }
 
   .u-section-2 .u-image-1 {
     width: 540px;
     height: 147px;
+    margin-bottom: 9px;
   }
 }
 
