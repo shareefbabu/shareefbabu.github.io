@@ -81,12 +81,14 @@
 
 @media (max-width: 575px) {
   .u-section-2 .u-sheet-1 {
-    min-height: 424px;
+    min-height: 109px;
   }
 
   .u-section-2 .u-image-1 {
     width: 340px;
     height: 93px;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 }.u-section-3 .u-sheet-1 {
   min-height: 400px;
