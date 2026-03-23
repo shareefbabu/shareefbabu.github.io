@@ -151,5 +151,42 @@ footer {
 .u-section-1 .u-image-1 {
     width: 160px;
 }
+    /* ===============================
+   FINAL NAVBAR HORIZONTAL FIX
+   =============================== */
+
+.u-menu .u-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 40px !important;
+    width: 100%;
+}
+
+.u-menu .u-nav-item {
+    display: inline-block !important;
+}
+
+.u-menu .u-nav-link {
+    display: inline-block !important;
+    padding: 10px 15px !important;
+}
+
+/* Remove vertical collapse behavior */
+.u-menu .u-nav-container {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* Prevent mobile vertical stacking */
+@media (max-width: 991px) {
+    .u-menu .u-nav {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 20px !important;
+    }
+}
+    
 
 }
