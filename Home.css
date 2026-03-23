@@ -190,3 +190,8 @@ footer {
     
 
 }
+.name{
+font-size:52px;
+font-weight:700;
+white-space:nowrap;
+}
