@@ -13,6 +13,7 @@ margin:0;
 background:#f5f5f5;
 }
 
+/* NAVBAR */
 .navbar{
 display:flex;
 justify-content:center;
@@ -28,6 +29,7 @@ font-size:18px;
 color:#4c7fb5;
 }
 
+/* MAIN CONTAINER */
 .container{
 max-width:1200px;
 margin:auto;
@@ -36,8 +38,9 @@ display:flex;
 gap:80px;
 }
 
+/* LEFT PROFILE */
 .left{
-width:300px;
+width:320px;
 text-align:center;
 }
 
@@ -50,7 +53,7 @@ border-radius:10px;
 margin-top:40px;
 background:black;
 color:white;
-padding:20px;
+padding:18px;
 font-size:22px;
 letter-spacing:4px;
 text-decoration:none;
@@ -68,6 +71,7 @@ gap:25px;
 width:70px;
 }
 
+/* RIGHT CONTENT */
 .right{
 flex:1;
 }
@@ -84,7 +88,8 @@ margin-bottom:60px;
 }
 
 .section-title{
-font-size:48px;
+font-size:40px;
+margin-top:40px;
 margin-bottom:20px;
 }
 
@@ -95,8 +100,8 @@ border-radius:15px;
 }
 
 .updates li{
-font-size:24px;
-margin-bottom:15px;
+font-size:22px;
+margin-bottom:12px;
 }
 
 .updates a{
@@ -104,11 +109,28 @@ color:#4c7fb5;
 text-decoration:none;
 }
 
+.research{
+margin-top:40px;
+font-size:24px;
+line-height:1.6;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+background:#333;
+color:white;
+padding:20px;
+margin-top:60px;
+font-size:14px;
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
 <a href="Home.html">Home</a>
 <a href="About.html">About</a>
@@ -117,6 +139,7 @@ text-decoration:none;
 <a href="Contact.html">Contact</a>
 </div>
 
+<!-- MAIN -->
 <div class="container">
 
 <div class="left">
@@ -179,9 +202,21 @@ Paper accepted – <b>Interspeech 2024</b>, Greece
 </ul>
 </div>
 
+<div class="section-title">Research Interests</div>
+
+<div class="research">
+Speaker Profiling and Characterization, Speaker Diarization,
+Speech Signal Processing, Deep Learning, Machine Learning.
 </div>
 
 </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+© 2024 Kalluri Shareef Babu
+</footer>
 
 </body>
 </html>
