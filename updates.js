@@ -5,6 +5,8 @@
 
 const updates = [
     'Organiser – <a href="https://displace2026.github.io/" target="_blank">DISPLACE-M Challenge 2026</a>',
+    'Paper accepted - <b> Interspeech 2026</b>, Sydney, Australia. ',
+    'Paper accpeted -  <b>Fusion-based Deep Learning Approach for Estrus Detection for Low-Resource Animal audio Using Augmentation Techniques, ISED-2026</b>, Warangal, India.
 
     'Paper accepted – <b>CE2CT 2026</b>, Bhimtal, Nainital, India.',
 
