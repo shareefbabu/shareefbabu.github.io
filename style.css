@@ -261,3 +261,31 @@ header {
         margin-left: 150px;
     }
 }
+
+/* =========================
+   Global Footer
+========================= */
+
+footer,
+.u-footer{
+    background:#333;
+    color:#fff;
+    text-align:center;
+    padding:16px 0;
+    margin-top:60px;
+}
+
+footer p,
+.u-footer .u-text-1{
+    margin:0;
+    font-size:15px;
+    line-height:1.5;
+}
+
+footer .u-sheet,
+.u-footer .u-sheet,
+footer .u-sheet-1,
+.u-footer .u-sheet-1{
+    min-height:auto !important;
+    padding:0;
+}

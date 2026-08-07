@@ -39,7 +39,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 40px;">Home</a>
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.html" style="padding: 10px 40px;">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About.html" style="padding: 10px 40px;">About</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Research.html" style="padding: 10px 40px;">Research</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="CV.html" style="padding: 10px 40px;">CV</a>
@@ -50,7 +50,7 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="index.html">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html">About</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Research.html">Research</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="CV.html">CV</a>
@@ -167,8 +167,18 @@
     
     
     
-    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0b71"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1"> © 2024 Kalluri Shareef Babu</p>
-      </div></footer>
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-0b71">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <p class="u-small-text u-text u-text-variant u-text-1">
+      &copy; <span id="current-year"></span> Kalluri Shareef Babu.
+    </p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+});
+</script>
   
 </body></html>

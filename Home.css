@@ -130,15 +130,6 @@ body {
     line-height: 1.7;
 }
 
-/* ===== FOOTER ===== */
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
 /* ===== RESPONSIVE DESIGN ===== */
 
 @media (max-width: 900px) {
@@ -191,3 +182,17 @@ footer {
 
 }
 
+html,
+body{
+    height:100%;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+.page-wrapper{
+    flex:1;
+}
