@@ -102,19 +102,51 @@ margin-bottom:20px;
 }
 
 .updates{
-background:#e5e5e5;
-padding:30px;
-border-radius:15px;
+
+    background:#e5e5e5;
+
+    padding:30px;
+
+    border-radius:15px;
 }
 
-.updates li{
-font-size:22px;
-margin-bottom:12px;
+.updates-container{
+
+    height:70px;
+
+    overflow:hidden;
+
+    position:relative;
 }
 
-.updates a{
-color:#4c7fb5;
-text-decoration:none;
+.updates-track{
+
+    transition:transform .7s ease;
+}
+
+.update-item{
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    font-size:22px;
+}
+
+.update-item a{
+
+    color:#4c7fb5;
+
+    text-decoration:none;
+
+    margin-left:5px;
+}
+
+.updates-container:hover .updates-track{
+
+    transition-duration:.2s;
 }
 
 .research{
@@ -123,11 +155,27 @@ font-size:24px;
 line-height:1.6;
 }
 
+html,
+body{
+    height:100%;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    margin:0;
+}
+
+.page-wrapper{
+    flex:1;
+}
+
 </style>
 </head>
 
 <body>
-
+<div class="page-wrapper">
 <!-- NAVBAR -->
 <div class="navbar">
 <a href="index.html">Home</a>
@@ -173,33 +221,13 @@ Assistant Professor, School of Electrical Engineering, Manipal Institute of Tech
 <div class="section-title">Updates</div>
 
 <div class="updates">
-<ul>
 
-<li>
-Organiser – 
-<a href="https://displace2026.github.io/">DISPLACE-M Challenge 2026</a>
-</li>
-<li>
-Paper accepted – <b>CE2CT 2026</b>, Bhimtal, Nainital, India. 
-</li>
-<li>
-Paper accepted – <b>APSIPA-ASC 2025</b>, Singapore
-</li>
+    <div class="updates-container">
 
-<li>
-Paper accepted – <b>IEEE TENCON 2025</b>, Malaysia
-</li>
+        <div id="updates-track" class="updates-track"></div>
 
-<li>
-Organiser – 
-<a href="https://displace2024.github.io/">DISPLACE Challenge 2024</a>
-</li>
+    </div>
 
-<li>
-Paper accepted – <b>Interspeech 2024</b>, Greece
-</li>
-
-</ul>
 </div>
 
 <div class="section-title">Research Interests</div>
@@ -212,7 +240,7 @@ Speech Signal Processing, Deep Learning, Machine Learning.
 </div>
 
 </div>
-
+</div>
 <!-- FOOTER -->
 <footer class="u-align-center u-clearfix u-footer u-grey-80" id="sec-footer">
     <div class="u-clearfix u-sheet u-sheet-1">
@@ -228,6 +256,10 @@ document.addEventListener("DOMContentLoaded", function () {
         new Date().getFullYear();
 });
 </script>
+
+<script src="updates.js"></script>
+
+<script src="updates-scroll.js"></script>
 
 </body>
 </html>
