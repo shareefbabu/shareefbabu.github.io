@@ -38,7 +38,7 @@ const teachingContent = `
       </td>
 
       <td>
-        July 2025 – December 2025
+        Jan 2026 – June 2026
       </td>
 
       <td>
@@ -52,27 +52,26 @@ const teachingContent = `
       </td>
 
       <td>
-        Jan 2024 – June 2025
+        July 2025 – December 2025
       </td>
 
       <td>
-        Digital Electronics,
-        Database Engineering
-      </td>
-    </tr>
-    <td>
         Database Management Systems, Linux-Lab
       </td>
     </tr>
+    
   <tr>
       <td>
         Assistant Professor, SOCS at UPES, Dehradun
       </td>
 
       <td>
-        July 2025 – December 2025
+        Jan 2025 – June 2025
       </td>  
-
+      <td>
+        Digital Electronics, Database Engineering  
+      </td>
+    </tr>
   </tbody>
 
 </table>
