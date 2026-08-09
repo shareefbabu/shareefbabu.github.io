@@ -1,0 +1,28 @@
+/* Global sticky footer: keep footer at bottom when content is short */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+body > header,
+body.u-body > header {
+  flex-shrink: 0;
+}
+
+body > footer,
+body > .u-footer,
+body.u-body > footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+body > .page-wrapper {
+  flex: 1 0 auto;
+}
