@@ -1,415 +1,408 @@
-# Personal Website
+# Personal Website - Detailed Editing Manual
 
-This website is a static HTML/CSS website. No special software or framework is required.
-
----
-
-# Project Structure
-
-```
-Website/
-│
-├── index.html          # Home Page
-├── About.html          # About Page
-├── Research.html       # Research Page
-├── CV.html             # CV Page
-├── Contact.html        # Contact Page
-│
-├── Home.css
-├── About.css
-├── Contact.css
-├── CV.css
-├── Research.css
-├── nicepage.css
-│
-├── updates.js          # Homepage Updates (Edit this only)
-├── updates-scroll.js   # Update animation (Do NOT edit)
-│
-└── images/
-```
+This repository contains a static personal website (no framework, no build pipeline).
+All visible content is edited directly in HTML/CSS/JS files.
 
 ---
 
-# Updating the Homepage
+## 1) What this website uses
 
-## 1. Profile Photograph
+- **HTML** for page structure:
+  - `index.html` (home)
+  - `html/*.html` (inner pages)
+- **CSS** for styling:
+  - `css/site.css` and page-specific CSS files
+- **JavaScript** for content injection/data rendering:
+  - `js/*.js`
 
-Replace:
-
-```
-images/shareef.jpeg
-```
-
-Keep the filename the same.
-
-Recommended size:
-
-- Width: 600–800 px
-- Portrait orientation
+There is **no npm install**, **no bundler**, and **no compile step**.
 
 ---
 
-## 2. Name
+## 2) Actual repository structure (current)
 
-Open
-
-```
-index.html
-```
-
-Find
-
-```html
-<div class="name">
-```
-
-Edit only the text.
-
-Example:
-
-```html
-<div class="name">
-Dr. Kalluri Shareef Babu
-</div>
+```text
+/
+├── index.html
+├── README.md
+├── html/
+│   ├── About.html
+│   ├── Contact.html
+│   ├── Experience.html
+│   ├── Highlights.html
+│   ├── News.html
+│   ├── Publications.html
+│   └── Research.html
+├── css/
+│   ├── About.css
+│   ├── Contact.css
+│   ├── Experience.css
+│   ├── Highlights.css
+│   ├── Home.css
+│   ├── News.css
+│   ├── Research.css
+│   ├── nicepage.css
+│   ├── site.css
+│   └── style.css
+├── js/
+│   ├── Home.js
+│   ├── about.js
+│   ├── Contact.js
+│   ├── Experience.js
+│   ├── Highlights.js
+│   ├── news.js
+│   ├── latest-news.js
+│   ├── all-news.js
+│   ├── research.js
+│   ├── research-content.js
+│   ├── publications.js
+│   ├── publications-content.js
+│   ├── cv.js
+│   ├── jquery.js
+│   └── nicepage.js
+├── images/
+├── docs/
+└── intlTelInput/
 ```
 
 ---
 
-## 3. Designation
+## 3) Fast workflow for any content change
 
-In
-
-```
-index.html
-```
-
-Find
-
-```html
-<div class="title">
-```
-
-Example:
-
-```html
-Assistant Professor,
-School of Electrical Engineering,
-Manipal Institute of Technology (MIT), Bengaluru
-```
-
-Only edit the text.
+1. Identify **which page** or section you want to edit.
+2. Find the matching file in `js/` using the mapping table below.
+3. Edit only the relevant object/template string.
+4. Save and open `index.html` in browser.
+5. Click through all related pages.
+6. Commit.
 
 ---
 
-## 4. Homepage Updates
+## 4) Page-to-file mapping (most important section)
 
-Open
+| Page | HTML file | Content source JS file(s) | Target container IDs |
+|---|---|---|---|
+| Home | `index.html` | `js/Home.js`, `js/news.js`, `js/latest-news.js` | `home-name`, `home-title`, `home-profile-image`, `home-research-interests`, `latest-news-list` |
+| About | `html/About.html` | `js/about.js` | `about-content` |
+| Research | `html/Research.html` | `js/research.js`, `js/research-content.js` | `research-records` |
+| Publications | `html/Publications.html` | `js/publications.js`, `js/publications-content.js` | `publications-list` |
+| Experience | `html/Experience.html` | `js/Experience.js` | `teaching-content`, `work-content`, `talks-content`, `fdp-content` |
+| Highlights | `html/Highlights.html` | `js/Highlights.js` | `volunteering-content`, `awards-content`, `professional-activities-content` |
+| Contact | `html/Contact.html` | `js/Contact.js` | `contact-information`, `office-information`, `office-map-content` |
+| News (full list) | `html/News.html` | `js/news.js`, `js/all-news.js` | `all-news-list` |
 
+> Note: `js/cv.js` exists but is currently not wired to a visible page in the current structure.
+
+---
+
+## 5) Detailed editing instructions by section
+
+## 5.1 Home page (name, title, profile image, social links, interests)
+
+### File
+`js/Home.js`
+
+### What to edit
+Edit the `homeContent` object keys:
+- `name`
+- `title`
+- `profileImage`
+- `socialLinks.linkedin`
+- `socialLinks.researchgate`
+- `socialLinks.googleScholar`
+- `researchInterests`
+
+### Example
+```js
+const homeContent = {
+  name: "Dr. Kalluri Shareef Babu",
+  title: "Assistant Professor, ...",
+  profileImage: "images/shareef.jpeg",
+  socialLinks: {
+    linkedin: "https://www.linkedin.com/in/...",
+    researchgate: "https://www.researchgate.net/profile/...",
+    googleScholar: "https://scholar.google.com/citations?..."
+  },
+  researchInterests: "Speaker Profiling, ..."
+};
 ```
-updates.js
-```
 
-Example:
+### Important
+- Keep quotes balanced.
+- Keep commas between fields.
+- If image filename changes, upload that image in `images/`.
 
-```javascript
-const updates = [
+---
 
-'Organiser – <a href="https://displace2026.github.io/" target="_blank">DISPLACE-M Challenge 2026</a>',
+## 5.2 About page biography
 
-'Paper accepted – <b>CE2CT 2026</b>, Bhimtal, India.',
+### File
+`js/about.js`
 
-'Paper accepted – <b>APSIPA ASC 2025</b>, Singapore.'
+### What to edit
+Edit the `aboutContent` template string.
 
+### Allowed HTML in text
+- `<b>...</b>`
+- `<a href="...">...</a>`
+- `<br>`
+
+### Important
+- Do not delete opening/closing backticks around the template string.
+
+---
+
+## 5.3 News (used in two places)
+
+### File
+`js/news.js`
+
+### Data shape
+```js
+const newsItems = [
+  {
+    date: "Month, Year",
+    text: "News text..."
+  }
 ];
 ```
 
-To add a new update, simply add another line:
+### Behavior
+- Home page shows only latest few items (from `latest-news.js`).
+- News page shows full list (from `all-news.js`).
 
-```javascript
-'Paper accepted – <b>ICASSP 2027</b>, Barcelona, Spain.',
-```
-
-For updates with a hyperlink:
-
-```javascript
-'Organiser – <a href="https://example.com" target="_blank">Conference Website</a>',
-```
-
-**Do not edit `updates-scroll.js`.**
+### Best practice
+- Add newest item at **top** of `newsItems`.
+- Keep `text` simple and concise.
 
 ---
 
-## 5. Research Interests
+## 5.4 Research records
 
-Open
+### Files
+- Data: `js/research.js`
+- Renderer: `js/research-content.js`
 
-```
-index.html
-```
+### What to edit
+In `research.js`, edit `researchRecords` array objects:
+- `duration`
+- `title`
+- `supervisor`
+- `funding`
+- `description`
 
-Find
+### Display rule
+- If `funding: ""`, the funding row is automatically omitted.
 
-```html
-<div class="research">
-```
-
-Example:
-
-```html
-Speaker Profiling and Characterization,
-Speaker Diarization,
-Speech Pathology,
-Speech Signal Processing,
-Deep Learning,
-Machine Learning.
-```
-
-Edit the text as required.
-
----
-
-# Updating the About Page
-
-Open
-
-```
-About.html
-```
-
-The biography is inside the large paragraph beginning with
-
-```html
-<p class="u-align-justify u-text u-text-2">
-```
-
-Edit the text only.
-
-No CSS changes are required.
-
----
-
-# Updating Publications
-
-Open
-
-```
-Research.html
-```
-
-Locate the publication list.
-
-Each publication is represented as a single list item (`<li>`).
-
-Example:
-
-```html
-<li>
-    <b>Paper Title</b><br>
-    Author 1, Author 2, <b>Kalluri Shareef Babu</b><br>
-    <i>Conference/Journal Name</i>, Year.
-</li>
+### Example
+```js
+{
+  duration: "2026 - Present",
+  title: "Project title",
+  supervisor: "Name, affiliation",
+  funding: "SERB",
+  description: "Description..."
+}
 ```
 
 ---
 
-## Adding a New Publication
+## 5.5 Publications
 
-1. Copy an existing publication entry (`<li>...</li>`).
+### Files
+- Data: `js/publications.js`
+- Renderer: `js/publications-content.js`
 
-2. Paste it at the desired position in the list.
-   - Add the newest publication at the **top** of the corresponding year's list.
-   - If the publication belongs to a new year, first create a new year heading and then add the publication below it.
+### What to edit
+Add/edit entries in `publications` array.
 
-3. Replace:
-   - Paper title
-   - Authors
-   - Conference or Journal name
-   - Year
-   - DOI/PDF/Project links (if available)
+### Required object fields
+```js
+{
+  year: "2026",
+  title: "Paper title",
+  authors: "Author1, Author2, ...",
+  venue: "Conference/Journal details",
+  link: "https://... or ''"
+}
+```
+
+### Sorting behavior
+- Years are auto-grouped and shown in descending numeric order.
+- Within a year, order follows array order.
+
+### PDF/document links
+- You may use:
+  - Absolute URL (current pattern), or
+  - Hosted root-relative path (for example `/docs/file.pdf`).
+- If link is empty string `""`, no "Click here" link is rendered.
 
 ---
 
-## Example
+## 5.6 Experience page tabs
 
-```html
-<h3>2027</h3>
+### File
+`js/Experience.js`
 
-<ul>
+### Editable sections
+- `teachingContent`
+- `workContent`
+- `talksContent`
+- `fdpContent`
 
-<li>
-<b>Learning Robust Speaker Embeddings Using ...</b><br>
+Each section is an HTML template string. Keep table/list tags balanced.
 
-Kalluri Shareef Babu, John Doe, Jane Smith<br>
-
-<i>IEEE ICASSP 2027</i><br>
-
-<a href="https://doi.org/...">DOI</a>
-
-</li>
-
-</ul>
-```
+### Safe edits
+- Add/remove `<li>` lines
+- Update dates/titles/URLs
+- Add `<a href="...">` links
 
 ---
 
-## Removing a Publication
+## 5.7 Highlights page tabs
 
-Delete the entire `<li>...</li>` block corresponding to that publication.
+### File
+`js/Highlights.js`
 
-If all publications of a particular year are removed, delete the year heading as well.
+### Editable sections
+- `volunteeringContent`
+- `awardsContent`
+- `professionalActivitiesContent`
 
----
-
-## Important
-
-Only edit the publication content.
-
-Do **not** modify:
-
-- HTML structure
-- CSS classes
-- Section headings
-- Layout or styling
+### Safe edits
+- Add or remove reviewer badges/links
+- Add awards list items
+- Update professional activity bullets
 
 ---
 
-# Updating the CV
+## 5.8 Contact page
 
-Replace
+### File
+`js/Contact.js`
 
-```
-CV.pdf
-```
+### Editable blocks
+- `contactInformation`
+- `officeInformation`
+- `officeMap`
 
-(or whichever PDF is linked from `CV.html`)
-
-If the filename changes, update the link inside
-
-```
-CV.html
-```
+### Google map update
+- Replace only iframe `src` URL in `officeMap`.
+- Keep `iframe` tag and closing tag intact.
 
 ---
 
-# Updating Contact Information
+## 6) Asset editing (images/docs)
 
-Open
+## 6.1 Images
+- Put images in `images/`
+- Use readable names, e.g. `profile-2026.jpg`
+- Update reference in related JS/HTML file
 
-```
-Contact.html
-```
-
-You can update:
-
-- Email address
-- Office information
-- Office location
+## 6.2 PDFs and docs
+- Put files in `docs/`
+- Update corresponding publication/link URL
 
 ---
 
-# Updating the Office Map
+## 7) Relative path rules (very important)
 
-In
+Because pages are split between root and `html/`:
 
-```
-Contact.html
-```
+- From `index.html` (root), CSS/JS paths start with:
+  - `css/...`
+  - `js/...`
+  - `images/...`
 
-Locate the Google Maps iframe:
+- From files in `html/`, paths should usually start with:
+  - `../css/...`
+  - `../js/...`
+  - `../images/...`
+  - `../index.html` (home link)
 
-```html
-<iframe
-    src="https://www.google.com/maps/embed?...">
-</iframe>
-```
-
-Replace the `src` with a new Google Maps Embed link if the office location changes.
-
----
-
-# Updating Social Media Links
-
-Open
-
-```
-index.html
-```
-
-Find the icons section.
-
-Example:
-
-```html
-<a href="https://www.linkedin.com/...">
-```
-
-Replace the URL only.
-
-Current links:
-
-- LinkedIn
-- ResearchGate
-- Google Scholar
+If a link/image/script stops working, first check this.
 
 ---
 
-# Replacing Social Icons
+## 8) What NOT to edit routinely
 
-Replace the corresponding files inside
+Avoid changing these unless you are intentionally doing framework-level changes:
 
-```
-images/
-```
-
-Keep the filenames unchanged.
-
----
-
-# Copyright
-
-The copyright year updates automatically.
-
-No manual changes are required.
+- `js/jquery.js`
+- `js/nicepage.js`
+- `css/nicepage.css`
+- `intlTelInput/*`
 
 ---
 
-# Styling
+## 9) Content style consistency checklist
 
-Most styling is contained in:
-
-```
-Home.css
-About.css
-Research.css
-Contact.css
-CV.css
-```
-
-Global website styles are in
-
-```
-nicepage.css
-```
-
-Avoid editing `nicepage.css` unless absolutely necessary.
+Before committing, verify:
+- Dates follow a consistent style (e.g. `Month, Year`).
+- Names and affiliations are spelled consistently.
+- URLs open in new tab when needed (`target="_blank"` if used in templates).
+- No trailing broken commas in JS arrays/objects.
+- No broken quote/backtick in template strings.
 
 ---
 
-# Files That Should Normally NOT Be Edited
+## 10) Pre-commit validation checklist
 
-```
-nicepage.css
-updates-scroll.js
-jquery.js
-nicepage.js
-```
-
-These files control the website layout and animations.
+1. Open `index.html`.
+2. Test Home sections:
+   - Name, title, profile image
+   - Latest news
+   - Social links
+3. Open each inner page from navbar:
+   - About
+   - Research
+   - Publications
+   - Experience
+   - Highlights
+   - Contact
+   - News
+4. Confirm:
+   - No missing images
+   - No blank/broken sections
+   - All key links clickable
 
 ---
 
-# Deployment
+## 11) Common mistakes and fixes
 
-Since this is a static website, simply upload all files to any web server or GitHub Pages repository.
+### Problem: page shows blank dynamic section
+Likely causes:
+- Wrong container ID
+- JS syntax error (missing comma, quote, or backtick)
 
-No build process is required.
+Fix:
+- Re-check the edited file for syntax first.
+
+### Problem: image/document not loading
+Likely causes:
+- Wrong path
+- Filename case mismatch
+
+Fix:
+- Confirm actual filename and folder location.
+- Match case exactly (`Shareef.jpeg` != `shareef.jpeg` on many hosts).
+
+### Problem: navbar links go to wrong location
+Likely cause:
+- Incorrect relative path from `html/` page
+
+Fix:
+- Use `../index.html` for Home from inner pages.
+
+---
+
+## 12) Deployment
+
+This is a static site.
+
+For GitHub Pages (recommended):
+1. Commit changes.
+2. Push to the configured branch.
+3. Wait for Pages deployment to finish.
+
+No build or runtime deployment commands are required.

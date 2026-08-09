@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <title>All News - Dr. Kalluri Shareef Babu</title>
+
+  <link rel="stylesheet" href="../css/nicepage.css" media="screen">
+  <link rel="stylesheet" href="../css/site.css" media="screen">
+  <link rel="stylesheet" href="../css/News.css" media="screen">
+
+  <script src="../js/jquery.js" defer></script>
+  <script src="../js/nicepage.js" defer></script>
+</head>
+
+
+<body class="u-body u-xl-mode">
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header class="u-clearfix u-header u-header" id="sec-header">
+
+    <div class="u-clearfix u-sheet u-sheet-1">
+
+      <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+
+        <div class="u-custom-menu u-nav-container">
+
+          <ul class="u-nav u-unstyled u-nav-1">
+
+            <li class="u-nav-item">
+              <a class="u-button-style u-nav-link"
+                 href="../index.html"
+                 style="padding: 10px 40px;">
+                Home
+              </a>
+            </li>
+
+            <li class="u-nav-item">
+              <a class="u-button-style u-nav-link"
+                 href="About.html"
+                 style="padding: 10px 40px;">
+                About
+              </a>
+            </li>
+
+            <li class="u-nav-item">
+              <a class="u-button-style u-nav-link"
+                 href="Research.html"
+                 style="padding: 10px 40px;">
+                Research
+              </a>
+            </li>
+
+            <li class="u-nav-item">
+              <a class="u-button-style u-nav-link"
+                 href="Publications.html"
+                 style="padding: 10px 40px;">
+                Publications
+              </a>
+            </li>
+
+            <li class="u-nav-item">
+              <a class="u-button-style u-nav-link"
+                 href="Experience.html"
+                 style="padding: 10px 40px;">
+                Experience
+              </a>
+            </li>
+
+            <li class="u-nav-item">
+              <a class="u-button-style u-nav-link"
+                 href="Highlights.html"
+                 style="padding: 10px 40px;">
+                Highlights
+              </a>
+            </li>
+
+            <li class="u-nav-item">
+              <a class="u-button-style u-nav-link"
+                 href="Contact.html"
+                 style="padding: 10px 40px;">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       ALL NEWS
+  ========================== -->
+
+  <section class="all-news-section">
+
+    <div class="all-news-container">
+
+      <h2>All News</h2>
+
+      <!-- News items are loaded from news.js -->
+      <div id="all-news-list" class="all-news-list"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="u-align-center u-clearfix u-footer u-grey-80">
+
+    <div class="u-clearfix u-sheet u-sheet-1">
+
+      <p class="u-small-text u-text u-text-variant">
+        &copy;
+        <span id="current-year"></span>
+        Kalluri Shareef Babu.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <!-- News data -->
+  <script src="../js/news.js"></script>
+
+  <!-- Generates the All News list -->
+  <script src="../js/all-news.js"></script>
+
+  <!-- Footer year -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+    });
+  </script>
+
+</body>
+
+</html>
