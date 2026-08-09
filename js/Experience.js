@@ -26,24 +26,52 @@ const teachingContent = `
       </td>
 
       <td>
-        —
+        Mircocontrollers and Embedded Systems, 
+        Object Oriented Programming 
+      </td>
+    </tr>
+
+    
+    <tr>
+      <td>
+        Assistant Professor, SOCS at UPES, Dehradun
+      </td>
+
+      <td>
+        July 2025 – December 2025
+      </td>
+
+      <td>
+        Object Oriented Programming - Java, Digital Electronics 
       </td>
     </tr>
 
     <tr>
       <td>
-        Assistant Professor at UPES, Dehradun
+        Assistant Professor, SOCS at UPES, Dehradun
       </td>
 
       <td>
-        Dec 2024 – June 2026
+        Jan 2024 – June 2025
       </td>
 
       <td>
-        Digital Electronics<br>
-        Database Engineering, DBMS, Java
+        Digital Electronics,
+        Database Engineering
       </td>
     </tr>
+    <td>
+        Database Management Systems, Linux-Lab
+      </td>
+    </tr>
+  <tr>
+      <td>
+        Assistant Professor, SOCS at UPES, Dehradun
+      </td>
+
+      <td>
+        July 2025 – December 2025
+      </td>  
 
   </tbody>
 
