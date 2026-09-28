@@ -18,7 +18,10 @@ const newsItems = [
         date: "June, 2026",
         text: "Joined as Assistant Professor in the School of Electrical Engineering at Manipal Institute of Technology Bangalore, MAHE."
     },
-    
+    {
+        date: "May, 2026",
+        text: "Promoted to IEEE Senior Member - Signal Processing Society, 2026."
+    },
     {
         date: "April, 2026",
         text: "One paper accepted at CE2CT 2026,Bhimtal, Nainital, Uttarakhand, India."
