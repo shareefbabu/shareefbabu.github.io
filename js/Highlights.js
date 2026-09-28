@@ -142,7 +142,9 @@ const volunteeringContent = `
 
 const awardsContent = `
   <ul class="u-align-justify u-text u-text-default u-text-2">
-
+    <li>
+      <b>Promoted to IEEE Senior Member - Signal Processing Society,</b> 2026.
+    </li>
     <li>
       <b>MHRD fellowship</b> for Ph.D,
       Government of India, December 2013–December 2018.
