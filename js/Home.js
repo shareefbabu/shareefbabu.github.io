@@ -8,7 +8,7 @@ const homeContent = {
     name: "Dr. Kalluri Shareef Babu",
 
     title:
-        "Assistant Professor, School of Electrical Engineering, Manipal Institute of Technology (MIT), Bengaluru",
+        "Assistant Professor, School of Electrical Engineering, Manipal Institute of Technology (MIT), Bengaluru, Senior Member IEEE-SPS",
 
     profileImage:
         "images/shareef.jpeg",
