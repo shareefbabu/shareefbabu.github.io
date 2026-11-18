@@ -1,4 +1,12 @@
 const newsItems = [
+        {
+        date: "November , 2026",
+        text: "One Paper accepted at The 11th International Conference on Machine Learning and Soft Computing (ICMLSC 2027) will be held on January 29-31, 2027 in Tokyo, Japan."
+    },
+    {
+        date: "November , 2026",
+        text: "One Paper accepted at 22nd International Conference on Natural Language Processing (ICON-2026), will be held on December 20-23, 2026, Guwahati, Assam, India ."
+    },
     {
         date: "August , 2026",
         text: "One Paper accepted at 14th ISED, NIT Warangal India."
