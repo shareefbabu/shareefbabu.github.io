@@ -4,8 +4,8 @@ const publications = [
         year: "2026",
         title: "Benchmarking Speech Systems for Frontline Health Conversations: The DISPLACE-M Challenge",
         authors: "Dhanya E, Ankita Meena, Manas Nanivadekar, Noumida A, Victor Azad, Ashwini Nagaraj Shenoy, Pratik Roy Chowdhuri, Shobhit Banga, Vanshika Chhabra, Chitralekha Bhat, Kalluri, Shareef Babu, Srikanth Raj Chetupalli, Deepu Vijayasenan, Sriram Ganapathy",
-        venue: "arXiv preprint arXiv:2603.02813 (2026). Interspeech 2026 - Accepted",
-        link: ""
+        venue: "arXiv preprint arXiv:2603.02813 (2026). Interspeech 2026.",
+        link: "https://arxiv.org/abs/2603.02813"
     },
 
     {
@@ -20,8 +20,8 @@ const publications = [
         year: "2026",
         title: "Sensor-Enabled Automated Bioacoustic Systems for Precision Livestock Management and Wildlife Welfare Monitoring: A Comprehensive Review",
         authors: "Sugandha Sharma, Virender Kadyan, Shareef Babu Kalluri",
-        venue: "International Journal on Smart Sensing and Intelligent Systems (Accepted)",
-        link: ""
+        venue: "International Journal on Smart Sensing and Intelligent Systems",
+        link: "https://shareefbabu.github.io/docs/Review_paper.pdf"
     },
 
     {
