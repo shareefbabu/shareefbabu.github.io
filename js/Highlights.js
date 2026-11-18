@@ -131,6 +131,20 @@ const volunteeringContent = `
        style="text-decoration: none; display: block;">
       SCPGCON 2026
     </a>
+    
+    <a href="https://2027.ieeeicassp.org/"
+       target="_blank"
+       class="reviewer-badge"
+       style="text-decoration: none; display: block;">
+      ICASSP 2027
+    </a>
+    
+     <a href="https://ece.iisc.ac.in/~ncc2027/index.html"
+       target="_blank"
+       class="reviewer-badge"
+       style="text-decoration: none; display: block;">
+      NCC 2027
+    </a>
 
   </div>
 `;
