@@ -32,13 +32,7 @@ const publications = [
         link: ""
     },
 
-    {
-        year: "2026",
-        title: "RD-Aug: A Reaction-Diffusion-Inspired Synthetic Augmentation Framework for Potato Blight Stage Classification",
-        authors: "Panduranga Ravi Teja, Prasad, M. V.D, Shareef Babu Kalluri, Karthik Nasani, B. Raja Srinivasa Reddy, Chaitanya Kumar Marpu",
-        venue: "Journal of Computers and Electronics in Agriculture (Under review)",
-        link: ""
-    },
+
 
     {
         year: "2026",
